@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('barangs', function (Blueprint $table) {
-            $table->integer('category_id')->default(0)->change();
+            // $table->integer('category_id')->change();
             $table->integer('qty')->default(0)->change();
         });
     }

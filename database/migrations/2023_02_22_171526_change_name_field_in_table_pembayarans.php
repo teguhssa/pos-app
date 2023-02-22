@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('pembelian_barangs', function (Blueprint $table) {
-            $table->integer('harga');
+        Schema::table('pembayarans', function (Blueprint $table) {
+            $table->renameColumn('invoice', 'no_trx');
         });
     }
 
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('pembelian_barangs', function (Blueprint $table) {
+        Schema::table('pembayarans', function (Blueprint $table) {
             //
         });
     }

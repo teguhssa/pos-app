@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('pembelian_barangs', function (Blueprint $table) {
-            Schema::dropIfExists('pembelian_barangs');
+        Schema::table('transaksis', function (Blueprint $table) {
+            $table->integer('total');
         });
     }
 
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('pembelian_barangs', function (Blueprint $table) {
+        Schema::table('transaksis', function (Blueprint $table) {
             //
         });
     }

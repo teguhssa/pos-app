@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('barangs', function (Blueprint $table) {
-            $table->renameColumn('barang_id', 'category_id');
+            $table->string('status')->default('non-aktif')->change();
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('barangs', function (Blueprint $table) {
-            // $table->renameColumn("`barang_id`", "`category_id`");
+            //
         });
     }
 };

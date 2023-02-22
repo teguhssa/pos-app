@@ -85,11 +85,17 @@ class StockInController extends Controller
         } else {
             $newHarga = $harga;
         }
+
+        $newStatus = '';
+        if($currentVal >= 0 && $harga >= 0) {
+            $newStatus = 'aktif';
+        }
        
 
         Barang::where('id', $request->barang_id)->first()->update([
             'qty' => $newVal,
-            'harga' => $newHarga
+            'harga' => $newHarga,
+            'status' => $newStatus
         ]);
 
         

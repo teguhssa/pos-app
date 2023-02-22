@@ -20,9 +20,9 @@ return new class extends Migration
             $table->integer('qty');
             $table->integer('harga');
             $table->integer('total');
-            $table->dropColumn('total_bayar');
-            $table->dropColumn('kembalian');
-            $table->dropColumn('petugas');
+            $table->integer('total_bayar');
+            $table->integer('kembalian');
+            $table->string('petugas');
             $table->timestamps();
         });
     }

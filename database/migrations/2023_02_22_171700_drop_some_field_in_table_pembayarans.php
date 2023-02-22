@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('barangs', function (Blueprint $table) {
-            $table->renameColumn('barang_id', 'category_id');
+        Schema::table('pembayarans', function (Blueprint $table) {
+            $table->dropColumn('total');
+            $table->dropColumn('total_bayar');
+            $table->dropColumn('kembalian');
         });
     }
 
@@ -25,8 +27,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('barangs', function (Blueprint $table) {
-            // $table->renameColumn("`barang_id`", "`category_id`");
+        Schema::table('pembayarans', function (Blueprint $table) {
+            //
         });
     }
 };

@@ -4,7 +4,8 @@ POS (Point of Sale) adalah sebuah sistem yang digunakan untuk mencatat dan mempr
 #Cara menjalankan aplikasi
 - Pastikan composer sudah terinstall
 - buat database baru dan atur didalam file .env
-- jalankan command db:seeb --class=userData
+- jalankan command php artisan migrate untuk membuat table
+- jalankan command db:seeb --class=userData untuk membuat akun
 - Akun:
 
   Admin: 
